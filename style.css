@@ -1,0 +1,174 @@
+
+/*Стилизація проєкта -*/
+/*index.html - всі блоки з user - по 2 в рядок. кнопки/аосилвння розташувати під інформацією про user.*/
+/*user-details.html - блок з інфою про user зверху сторінки. Кнопка нижчє, на 90% ширини сторінки, по центру.*/
+/*блоки з короткою іфною про post - в ряд по 5 .*/
+/*post-details.html - блок з інфою про пост зверху. Коментарі - по 4 в ряд.*/
+/*Всі елементи котрі характеризують users, posts, comments візуалізувати, так, щоб було видно що це блоки*/
+/*(дати фон. марджини і тд)*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body, button {
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    font-weight: 500;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: 3px solid #3c3f40;
+    color: #3c3f40;
+}
+
+button:hover {
+    background: #3c3f40;
+    color: white;
+
+}
+
+h3 {
+    font-size: 20pt;
+    color: rgba(30, 30, 32, 0.5);
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*index----------------------------*/
+#users-block {
+    width: 70vw;
+}
+
+.user-item {
+
+    width: 46%; /* 2 in row */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #f1f1f1;
+    border-radius: 10px;
+
+    margin: 70px 10px 10px;
+    padding: 60px 0 20px;
+    position: relative;
+}
+
+.user-item img {
+    width: 100px;
+    border-radius: 50%;
+    border: 10px solid white;
+
+    position: absolute;
+    top: -70px; /* 50px (half pic) + 20px (radius * 2)  */
+}
+
+.user-item span {
+    font-size: 0.8rem;
+    color: silver;
+}
+
+/*user-details----------------------------*/
+button#posts {
+    width: 90%;
+}
+
+#userInfo, #postInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    width: 87.5%;
+    margin: 10px;
+    padding: 20px;
+}
+
+#userInfo p {
+    margin: 5px;
+}
+
+#userInfo span, #postInfo span {
+    font-weight: 500;
+}
+
+#userInfo span:after, #postInfo span:after {
+    content: ': ';
+}
+
+#userInfo > div {
+    margin: 10px;
+    padding: 5px 20px;
+    font-weight: 500;
+    background: black;
+    color: white;
+}
+
+#userInfo img {
+    border-radius: 10px;
+}
+
+#postsInfo {
+    margin-top: 10px;
+    width: 90%;
+    justify-content: space-between;
+}
+
+#postsInfo > div {
+    width: 12%; /* 5 in row */
+
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 2%;
+    margin: 2%;
+}
+#postsInfo a{
+    text-decoration: none;
+    color: black;
+}
+#postsInfo a:hover{
+    text-decoration: underline;
+}
+
+/*post-details----------------------------*/
+#postInfo{
+    align-items: flex-start;
+}
+h3{
+    font-family: "Roboto", sans-serif;
+}
+#comments {
+    margin-top: 10px;
+    width: 90%;
+    justify-content: space-between;
+}
+#comments div {
+    width: 17%; /* 4 in row */
+
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    padding: 2%;
+    margin: 2%;
+}
+
+#comments div p:nth-child(2){
+    font-weight: bold;
+}
+
+#comments div p:nth-child(3){
+    color: gray;
+}
